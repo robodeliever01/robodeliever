@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Robot</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <!-- Leaflet Geosearch CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Leaflet Routing Machine JS -->
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+    <!-- Leaflet Geosearch JS -->
+    <script src="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.umd.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <button class="stop-btn" id="stopBtn">STOP</button>
+            <button class="location-btn" id="robotLocationBtn">LOCATION</button>
+        </header>
+        
+        <main>
+            <div class="location-container">
+                <button class="location-input-btn" id="pickupBtn">YOUR LOCATION</button>
+                <button class="location-input-btn" id="dropBtn">DROP LOCATION</button>
+            </div>
+            
+            <div class="map-container" id="map"></div>
+            
+            <div class="location-input-container" id="locationInputContainer">
+                <div id="search-container">
+                    <input type="text" id="locationInput" placeholder="Enter location">
+                    <div id="search-results"></div>
+                </div>
+                <button id="confirmLocationBtn">Confirm</button>
+                <button id="cancelLocationBtn">Cancel</button>
+            </div>
+        </main>
+        
+        <div class="status-bar">
+            <p id="statusText">Robot is ready</p>
+        </div>
+    </div>
+</body>
+</html> 
